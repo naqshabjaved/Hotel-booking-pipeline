@@ -44,18 +44,18 @@ hotel_booking_pipeline/
 ├── README.md
 
 ## 📊 Dataset Summary
--Total rows: 36,275
--No missing values after preprocessing
--Features include guest counts, meal plan, room type, lead time, special requests, pricing, and booking status
--booking_status transformed into binary target is_canceled
+- Total rows: 36,275
+- No missing values after preprocessing
+- Features include guest counts, meal plan, room type, lead time, special requests, pricing, and booking status
+- booking_status transformed into binary target is_canceled
 ## 🧠 Feature Engineering
 
 The pipeline automatically adds:
--total_nights
--total_guests
--avg_price_per_person
--lead_time_cat (short, medium, long)
--weekend_booking flag
+- total_nights
+- total_guests
+- avg_price_per_person
+- lead_time_cat (short, medium, long)
+- weekend_booking flag
 
 These significantly improve predictive performance.
 
@@ -88,23 +88,23 @@ python -m hotel_bookings_pipeline.predict --model_path tuned_rf.joblib --csv_pat
 
 ## 📈 Model Performance (Tuned RF – Test Set)
 
--Accuracy: **0.8969**
--Precision: **0.8646**
--Recall: **0.8127**
--F1 Score: **0.8378**
--ROC-AUC: **0.9552**
+- Accuracy: **0.8969**
+- Precision: **0.8646**
+- Recall: **0.8127**
+- F1 Score: **0.8378**
+- ROC-AUC: **0.9552**
 
 Best model: Tuned Random Forest
 
 ## 🧰 Tech Stack
-Python
-Pandas
-NumPy
-Scikit-Learn
-Joblib
-Seaborn / Matplotlib
-PyTest
-GitHub Actions
+- Python
+- Pandas
+- NumPy
+- Scikit-Learn
+- Joblib
+- Seaborn / Matplotlib
+- PyTest
+- GitHub Actions
 
 ## 📦 Installation
 
