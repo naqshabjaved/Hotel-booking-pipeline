@@ -5,7 +5,7 @@ The project includes data processing, feature engineering, model training, hyper
 
 
 
-## 🚀 Key Features
+## Key Features
 
 - **Modular ML Pipeline** (data loading → preprocessing → feature engineering → training → evaluation → prediction)
 - **Clean, reusable code structure**
@@ -17,38 +17,39 @@ The project includes data processing, feature engineering, model training, hyper
 - **Complete reproducibility & testability**
 
 
-## 📁 Project Structure
+## Project Structure
 
+```
 hotel_booking_pipeline/
 ├── hotel_bookings_pipeline/
-│ ├── data_loader.py
-│ ├── preprocess.py
-│ ├── feature_engineering.py
-│ ├── train.py
-│ ├── evaluate.py
-│ ├── utils.py
-│ ├── main.py
-│ ├── predict.py
-│
+│   ├── data_loader.py
+│   ├── preprocess.py
+│   ├── feature_engineering.py
+│   ├── train.py
+│   ├── evaluate.py
+│   ├── utils.py
+│   ├── main.py
+│   └── predict.py
 ├── screenshots/
-│ ├── baseline_run_in_powershell.png
-│ ├── final_build.png
-│ ├── first_few_columns_of_preds.csv_.png
-│ ├── predict_run.png
-│ ├── tuned_run_in_powershell (1).png
-│ ├── tuned_run_in_powershell (2).png
-│ ├── tuned_run_in_powershell (3).png
-│
+│   ├── baseline_run_in_powershell.png
+│   ├── final_build.png
+│   ├── first_few_columns_of_preds.csv_.png
+│   ├── predict_run.png
+│   ├── tuned_run_in_powershell (1).png
+│   ├── tuned_run_in_powershell (2).png
+│   └── tuned_run_in_powershell (3).png
 ├── Hotel Reservations.csv
 ├── requirements.txt
-├── README.md
+└── README.md
+```
 
-## 📊 Dataset Summary
+## Dataset Summary
 - Total rows: 36,275
 - No missing values after preprocessing
 - Features include guest counts, meal plan, room type, lead time, special requests, pricing, and booking status
 - booking_status transformed into binary target is_canceled
-## 🧠 Feature Engineering
+
+## Feature Engineering
 
 The pipeline automatically adds:
 - total_nights
@@ -59,7 +60,7 @@ The pipeline automatically adds:
 
 These significantly improve predictive performance.
 
-## ⚙️ How to Run
+## How to Run
 
 **Baseline training:**
 python -m hotel_bookings_pipeline.main --data_path "Hotel Reservations.csv" --model_out baseline_rf.joblib
@@ -70,7 +71,7 @@ python -m hotel_bookings_pipeline.main --data_path "Hotel Reservations.csv" --mo
 **Run predictions:**
 python -m hotel_bookings_pipeline.predict --model_path tuned_rf.joblib --csv_path "Hotel Reservations.csv" --output_path preds.csv
 
-## 📸 Screenshots
+## Screenshots
 **Baseline Run**
 (screenshots/baseline_run_in_powershell.png)
 
@@ -86,7 +87,7 @@ python -m hotel_bookings_pipeline.predict --model_path tuned_rf.joblib --csv_pat
 **GitHub Actions Successful Build**
 (screenshots/final_build.png)
 
-## 📈 Model Performance (Tuned RF – Test Set)
+## Model Performance (Tuned RF – Test Set)
 
 - Accuracy: **0.8969**
 - Precision: **0.8646**
@@ -96,7 +97,7 @@ python -m hotel_bookings_pipeline.predict --model_path tuned_rf.joblib --csv_pat
 
 Best model: Tuned Random Forest
 
-## 🧰 Tech Stack
+## Tech Stack
 - Python
 - Pandas
 - NumPy
@@ -106,15 +107,15 @@ Best model: Tuned Random Forest
 - PyTest
 - GitHub Actions
 
-## 📦 Installation
+## Installation
 
 pip install -r requirements.txt
 
-## 🧪 Running Tests
+## Running Tests
 
 pytest -q
 
-## 📬 Contact
+## Contact
 
 Naqshab Javed
 GitHub: https://github.com/naqshabjaved
